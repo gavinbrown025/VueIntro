@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Working With Vue</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/master.css">
+	<!--[if lt IE 9]><script src="js/htm5shiv.js"></script><[end if]-->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+	<main id="app">
+
+		<h1 @click="anotherFunction">{{ message }}</h1>
+		<p>{{anotherThing}}</p>
+
+		<ul>
+			<li v-for="prof in professors">
+				<p>Name: {{prof.name}}, Job: {{prof.role}}</p>
+				
+				<a href="" class="remove-prof" 
+				@click.prevent="removeProf(prof)" 
+				:class="{'prof-button-modifier' : removeAFormat}">
+					Remove {{prof.name}}
+				</a>
+			</li>
+		</ul>
+		<section class="bio-data" :class="{'show-bio' : showBioData}">
+			<h2>{{currentProf.name}}</h2>
+			<p>{{currentProf.bio}}</p>
+		</section>
+
+	</main>
+<script src="js/main.js" type="module"></script>
+</body>
+</html> 
