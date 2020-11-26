@@ -1,0 +1,30 @@
+body {
+  font-family: "Monserat", "Trebuchet MS", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
+.remove-prof {
+  padding: 10px;
+  color: white;
+  background-color: #333;
+  border: cyan 2px solid;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.remove-prof:hover {
+  background-color: black;
+}
+
+.prof-button-modifier {
+  text-decoration: none;
+}
+
+.bio-data {
+  display: none;
+}
+
+.show-bio {
+  display: block !important;
+}
+
+/*# sourceMappingURL=master.css.map */
